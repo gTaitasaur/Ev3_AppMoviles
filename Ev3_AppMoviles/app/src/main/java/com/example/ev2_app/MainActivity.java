@@ -84,6 +84,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         super.onPause();
         sensorManager.unregisterListener(this);
     }
+    
 
     @Override
     public void onSensorChanged(SensorEvent event) {
@@ -101,6 +102,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
             isVertical = false;
         }
     }
+
 
     @Override
     public void onAccuracyChanged(Sensor sensor, int accuracy) {

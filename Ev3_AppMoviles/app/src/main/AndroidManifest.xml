@@ -13,6 +13,10 @@
         android:theme="@style/Theme.Ev2_App"
         tools:targetApi="31">
         <activity
+            android:name=".MuestaDatos"
+            android:exported="false" />
+
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

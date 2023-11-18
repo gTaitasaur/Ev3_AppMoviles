@@ -249,24 +249,6 @@
             </LinearLayout>
 
             <Button
-                android:id="@+id/button_cancelar"
-                style="@style/Widget.Material3.Button.IconButton.Filled"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginEnd="15dp"
-                android:backgroundTint="#C1001F"
-                android:text="Cancelar"
-                android:textColorHighlight="#FFFFFF"
-                android:textColorLink="#FFFFFF"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toStartOf="@+id/button_guardar"
-                app:layout_constraintHorizontal_weight="1"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/container_gris" />
-
-            <Button
                 android:id="@+id/button_guardar"
                 style="@style/Widget.Material3.Button.IconButton.Filled"
                 android:layout_width="match_parent"
@@ -282,8 +264,24 @@
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_weight="1"
-                app:layout_constraintStart_toEndOf="@+id/button_cancelar"
                 app:layout_constraintTop_toBottomOf="@+id/container_gris" />
+
+            <Button
+                android:id="@+id/button_mostrarDatos"
+                style="@style/Widget.Material3.Button.IconButton.Filled"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:backgroundTint="#C1001F"
+                android:text="Mostrar datos"
+                android:textColorHighlight="#FFFFFF"
+                android:textColorLink="#FFFFFF"
+                android:textSize="20sp"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button_guardar" />
 
         </LinearLayout>
     </ScrollView>
