@@ -27,7 +27,7 @@ public class getIncidentes extends AppCompatActivity {
 
         databaseHelper = new Sqlito(this);
 
-        grabar = (Button) findViewById(R.id.grabacion);
+        grabar = (Button) findViewById(R.id.button_guardar);
         mostrar = (Button) findViewById(R.id.button_mostrarDatos);
 
         etFecha = (EditText) findViewById(R.id.editTextFecha);
