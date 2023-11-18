@@ -1,6 +1,7 @@
 package com.example.ev2_app;
 import android.app.AlertDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -28,6 +29,16 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //      CAMBIA PANTALLA A MOSTRAR DATOS
+        Button buttonMostrarDatos = findViewById(R.id.button_mostrarDatos);
+        buttonMostrarDatos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, MuestaDatos.class);
+                startActivity(intent);
+            }
+        });
 
         progressBar = findViewById(R.id.progressBar);
         Button myButton = findViewById(R.id.button_guardar);
@@ -84,7 +95,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         super.onPause();
         sensorManager.unregisterListener(this);
     }
-    
+
 
     @Override
     public void onSensorChanged(SensorEvent event) {
