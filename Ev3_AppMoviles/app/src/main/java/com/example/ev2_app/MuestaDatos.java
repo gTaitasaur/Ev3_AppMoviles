@@ -17,7 +17,7 @@ public class MuestaDatos extends AppCompatActivity {
 
     private ListView listView;
     private ArrayList<UserModel> userModelArrayList;
-    private CustomAdapter customAdapter;
+    private RecogeDatos customAdapter;
     private Sqlito databaseHelper;
 
 
@@ -32,7 +32,7 @@ public class MuestaDatos extends AppCompatActivity {
         listView = (ListView) findViewById(R.id.muestra_lista);
         databaseHelper = new Sqlito(this);
         userModelArrayList = databaseHelper.getAllUsers();
-        customAdapter = new CustomAdapter(this, userModelArrayList);
+        customAdapter = new RecogeDatos(this, userModelArrayList);
         listView.setAdapter(customAdapter);
 
 
