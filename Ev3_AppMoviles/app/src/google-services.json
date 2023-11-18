@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "81399635921",
+    "project_id": "evaluaciontres-fd57b",
+    "storage_bucket": "evaluaciontres-fd57b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:81399635921:android:3b6ce955a542ab90c14af0",
+        "android_client_info": {
+          "package_name": "com.example.ev2_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrSZC9slBK8QHn0S0UJNIYdrNjKZYWiSA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
