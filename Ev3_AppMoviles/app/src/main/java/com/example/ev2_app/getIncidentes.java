@@ -16,7 +16,7 @@ public class getIncidentes extends AppCompatActivity {
     private Button grabar, mostrar;
     private EditText etFecha, etHora, etNombre, etRut, etLab, etDesc;
 
-    Spinner spinnerList = findViewById(R.id.lista_Labs);
+//    Spinner spinnerList = findViewById(R.id.lista_Labs);
 
     private Sqlito databaseHelper;
 
@@ -44,7 +44,8 @@ public class getIncidentes extends AppCompatActivity {
                 etNombre.setText("");
                 etRut.setText("");
                 etDesc.setText("");
-                Toast.makeText(Sqlito.this, "Incidente Grabado!!!!!!", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(Sqlito.this, "Incidente Grabado!!!!!!", Toast.LENGTH_SHORT).show();
+
             }
         });
 
