@@ -81,7 +81,7 @@ public class Sqlito extends SQLiteOpenHelper {
         return userModelArrayList;
     }
 
-    public int updateUser(int id, String description) {
+    public int updateUser(int id, String description, String s, String toString, String string, String s1) {
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues values = new ContentValues();
