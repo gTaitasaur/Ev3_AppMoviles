@@ -18,14 +18,14 @@ public class Sqlito extends SQLiteOpenHelper {
     private static final String KEY_HORA = "hora";
     private static final String KEY_FECHA = "fecha";
     private static final String KEY_LAB = "laboratorio";
-    private static final String KEY_FIRSTNAME = "nombre";
+    private static final String KEY_NOMBRE = "nombre";
     private static final String KEY_RUT = "rut";
-    private static final String KEY_DESCRIPTION = "descripcion";
+    private static final String KEY_DESCRIPTION = "description";
 
 
     private static final String CREATE_TABLE_INCIDENTES = "CREATE TABLE "
             + TABLE_REPORT + "(" + KEY_ID
-            + " INTEGER PRIMARY KEY AUTOINCREMENT," + KEY_FIRSTNAME + " TEXT, "+ KEY_HOBBY + " TEXT, "+ KEY_FAVNUMBER + " TEXT );";
+            + " INTEGER PRIMARY KEY AUTOINCREMENT," + KEY_HORA + " TEXT, " + KEY_FECHA + " TEXT, " + KEY_LAB + " TEXT, "+ KEY_NOMBRE + " TEXT, "+ KEY_RUT + " TEXT, "+ KEY_DESCRIPTION + " TEXT );";
 
     public Sqlito(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -44,14 +44,16 @@ public class Sqlito extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public long addUserDetail(String name, String hobby, String favnumber) {
+    public long addUserDetail(String hora, String fecha, String laboratorio, String nombre, String rut, String description) {
         SQLiteDatabase db = this.getWritableDatabase();
         // Creating content values
         ContentValues values = new ContentValues();
-        values.put(KEY_FIRSTNAME, name);
-        values.put(KEY_HOBBY, hobby);
-        values.put(KEY_FAVNUMBER, favnumber);
-       // insert row in students table
+        values.put(KEY_HORA, nombre);
+        values.put(KEY_FECHA, fecha);
+        values.put(KEY_LAB, laboratorio);
+        values.put(KEY_NOMBRE, nombre);
+        values.put(KEY_RUT, rut);
+        values.put(KEY_DESCRIPTION, description);
         long insert = db.insert(TABLE_REPORT, null, values);
 
         return insert;
@@ -67,7 +69,7 @@ public class Sqlito extends SQLiteOpenHelper {
             do {
                 UserModel userModel = new UserModel();
                 userModel.setId(c.getInt(c.getColumnIndex(KEY_ID)));
-                userModel.setName(c.getString(c.getColumnIndex(KEY_FIRSTNAME)));
+                userModel.setName(c.getString(c.getColumnIndex(KEY_NOMBRE)));
                 userModel.setHobby(c.getString(c.getColumnIndex(KEY_HOBBY)));
                 userModel.setFavnumber(c.getString(c.getColumnIndex(KEY_FAVNUMBER)));
                // adding to Students list
@@ -77,22 +79,18 @@ public class Sqlito extends SQLiteOpenHelper {
         return userModelArrayList;
     }
 
-    public int updateUser(int id, String name, String hobby, String favnumber) {
+    public int updateUser(int id, String description) {
         SQLiteDatabase db = this.getWritableDatabase();
 
-        // Creating content values
         ContentValues values = new ContentValues();
-        values.put(KEY_FIRSTNAME, name);
-        values.put(KEY_HOBBY, hobby);
-        values.put(KEY_FAVNUMBER, favnumber);
-       // update row in students table base on students.is value
+        values.put(KEY_DESCRIPTION, description);
+
         return db.update(TABLE_REPORT, values, KEY_ID + " = ?",
                 new String[]{String.valueOf(id)});
     }
 
     public void deleteUSer(int id) {
 
-        // delete row in students table based on id
         SQLiteDatabase db = this.getWritableDatabase();
         db.delete(TABLE_REPORT, KEY_ID + " = ?",
                 new String[]{String.valueOf(id)});
