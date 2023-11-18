@@ -46,7 +46,7 @@ public class Sqlito extends SQLiteOpenHelper {
 
     public long addUserDetail(String hora, String fecha, String laboratorio, String nombre, String rut, String description) {
         SQLiteDatabase db = this.getWritableDatabase();
-        // Creating content values
+
         ContentValues values = new ContentValues();
         values.put(KEY_HORA, nombre);
         values.put(KEY_FECHA, fecha);
@@ -64,7 +64,7 @@ public class Sqlito extends SQLiteOpenHelper {
         String selectQuery = "SELECT  * FROM " + TABLE_REPORT;
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = db.rawQuery(selectQuery, null);
-        // looping through all rows and adding to list
+
         if (c.moveToFirst()) {
             do {
                 UserModel userModel = new UserModel();
@@ -72,7 +72,7 @@ public class Sqlito extends SQLiteOpenHelper {
                 userModel.setName(c.getString(c.getColumnIndex(KEY_NOMBRE)));
                 userModel.setHobby(c.getString(c.getColumnIndex(KEY_HOBBY)));
                 userModel.setFavnumber(c.getString(c.getColumnIndex(KEY_FAVNUMBER)));
-               // adding to Students list
+
                 userModelArrayList.add(userModel);
             } while (c.moveToNext());
          }
