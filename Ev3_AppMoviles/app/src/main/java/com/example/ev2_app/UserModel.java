@@ -15,28 +15,40 @@ public class UserModel implements Serializable{
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getFecha() {
+        return fecha;
+    }
+    public String getHora() {
+        return hora;
+    }
+    public String getLaboratorio() {
+        return laboratorio;
+    }
+    public String getNombre() {
+        return nombre;
+    }
+    public String getDescription() {
+        return description;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setFecha(String fecha) {
+        this.fecha = fecha;
     }
 
-    public String getHobby() {
-        return hobby;
+    public void setHora(String hora) {
+        this.hora = hora;
     }
 
-    public void setHobby(String hobby) {
-        this.hobby = hobby;
+    public void setLaboratorio(String laboratorio) {
+        this.laboratorio = laboratorio;
     }
 
-    public String getFavnumber() {
-        return favnumber;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
-    public void setFavnumber(String favnumber) {
-        this.favnumber = favnumber;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
 }

@@ -69,10 +69,11 @@ public class Sqlito extends SQLiteOpenHelper {
             do {
                 UserModel userModel = new UserModel();
                 userModel.setId(c.getInt(c.getColumnIndex(KEY_ID)));
-                userModel.setFecha
-                userModel.setName(c.getString(c.getColumnIndex(KEY_NOMBRE)));
-                userModel.setHobby(c.getString(c.getColumnIndex(KEY_HOBBY)));
-                userModel.setFavnumber(c.getString(c.getColumnIndex(KEY_DESCRIPTION)));
+                userModel.setFecha(c.getString(c.getColumnIndex(KEY_FECHA)));
+                userModel.setHora(c.getString(c.getColumnIndex(KEY_HORA)));
+                userModel.setLaboratorio(c.getString(c.getColumnIndex(KEY_LAB)));
+                userModel.setNombre(c.getString(c.getColumnIndex(KEY_NOMBRE)));
+                userModel.setDescription(c.getString(c.getColumnIndex(KEY_DESCRIPTION)));
 
                 userModelArrayList.add(userModel);
             } while (c.moveToNext());
