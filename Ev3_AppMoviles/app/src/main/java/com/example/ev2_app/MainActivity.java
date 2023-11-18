@@ -38,6 +38,9 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         buttonMostrarDatos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Spinner spinnerList = findViewById(R.id.lista_labs);
+                String labsOption = (String) spinnerList.getSelectedItem();
+                Log.e("RuletaTest", "Se ha seleccionado: " + labsOption);
                 Intent intent = new Intent(MainActivity.this, MuestaDatos.class);
                 startActivity(intent);
             }
