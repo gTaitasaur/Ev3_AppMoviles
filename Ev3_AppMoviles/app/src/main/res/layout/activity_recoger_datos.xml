@@ -93,64 +93,24 @@
 
 
                 <TextView
-                    android:id="@+id/rdFecha"
+                    android:id="@+id/descrip_nombre"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:gravity="center_vertical"
-                    android:paddingLeft="10dp"
-                    android:text="Fecha"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textColor="#fff" />
-
-                <TextView
-                    android:id="@+id/rdHora"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:gravity="center_vertical"
-                    android:paddingLeft="10dp"
-                    android:text="Hora"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textColor="#fff" />
-
-                <TextView
-                    android:id="@+id/rdLab"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:gravity="center_vertical"
-                    android:paddingLeft="10dp"
-                    android:text="Laboratorio"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textColor="#fff" />
-
-                <TextView
-                    android:id="@+id/rdNombre"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:gravity="center_vertical"
-                    android:paddingLeft="10dp"
-                    android:text="Nombre"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textColor="#fff" />
-
-                <TextView
-                    android:id="@+id/rdDescription"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:gravity="center_vertical"
-                    android:paddingLeft="10dp"
                     android:text="Descripcion"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textColor="#fff" />
+                    android:textSize="20dp" />
+
+                <EditText
+                    android:id="@+id/editTextText"
+                    android:layout_width="match_parent"
+                    android:layout_height="98dp"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="Descripcion del incidente" />
 
             </LinearLayout>
 
             <Button
-                android:id="@+id/button_volver"
+                android:id="@+id/button_guardarUpdate"
                 style="@style/Widget.Material3.Button.IconButton.Filled"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -158,13 +118,30 @@
                 android:layout_marginTop="15dp"
                 android:layout_marginEnd="15dp"
                 android:backgroundTint="#C1001F"
-                android:text="Volver"
+                android:text="Guardar Cambios"
                 android:textColorHighlight="#FFFFFF"
                 android:textColorLink="#FFFFFF"
                 android:textSize="20sp"
                 app:layout_constraintHorizontal_weight="1"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/container_gris" />
+
+            <Button
+                android:id="@+id/button_eliminar"
+                style="@style/Widget.Material3.Button.IconButton.Filled"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:backgroundTint="#C1001F"
+                android:text="Eliminar Incidente"
+                android:textColorHighlight="#FFFFFF"
+                android:textColorLink="#FFFFFF"
+                android:textSize="20sp"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button_guardarUpdate" />
 
         </LinearLayout>
     </ScrollView>
