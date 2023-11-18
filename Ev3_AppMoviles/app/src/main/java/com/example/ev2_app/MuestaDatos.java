@@ -49,13 +49,13 @@ public class MuestaDatos extends AppCompatActivity {
 
 // HARDCODEO: SE REEMPLAZA get(position) por get(0),  TAMBIEN MainActivity.class por Sqlito.class
         //      CAMBIA PANTALLA A MOSTRAR DATOS
-//        buttonVolver.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(MuestaDatos.this, Sqlito.class);
-//                intent.putExtra("user", userModelArrayList.get(0));
-//                startActivity(intent);
-//            }
-//        });
+        buttonVolver.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MuestaDatos.this, MainActivity.class);
+                intent.putExtra("user", userModelArrayList.get(0));
+                startActivity(intent);
+            }
+        });
     }
 }
