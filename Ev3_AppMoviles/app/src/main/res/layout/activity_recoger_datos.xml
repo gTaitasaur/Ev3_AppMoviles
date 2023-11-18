@@ -67,7 +67,7 @@
                 android:shadowDx="3"
                 android:shadowDy="1"
                 android:shadowRadius="3"
-                android:text="DATOS DE INCIDENTES"
+                android:text="EDITAR INCIDENTES"
                 android:textColor="#7a7a7a"
                 android:textSize="20sp"
                 android:textStyle="bold"
