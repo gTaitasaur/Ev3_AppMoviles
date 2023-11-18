@@ -53,7 +53,6 @@ public class MuestaDatos extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MuestaDatos.this, MainActivity.class);
-                intent.putExtra("user", userModelArrayList.get(0));
                 startActivity(intent);
             }
         });
