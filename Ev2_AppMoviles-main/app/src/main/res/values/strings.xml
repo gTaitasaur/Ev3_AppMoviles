@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Ev2_App</string>
+
+    <string-array name="lista_labs">
+        <item>C2</item>
+        <item>LINF</item>
+        <item>LEICA</item>
+        <item>LNET</item>
+        <item>LTEL</item>
+    </string-array>
+
+</resources>
