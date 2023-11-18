@@ -36,6 +36,8 @@ public class MuestaDatos extends AppCompatActivity {
         listView.setAdapter(customAdapter);
 
 
+
+// HARDCODEO: SE REEMPLAZA get(position) por get(0),  TAMBIEN MainActivity.class por Sqlito.class
         buttonVolver.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
