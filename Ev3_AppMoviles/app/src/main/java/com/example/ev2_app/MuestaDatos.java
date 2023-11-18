@@ -6,8 +6,20 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.AdapterView;
+import android.widget.ListView;
+
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MuestaDatos extends AppCompatActivity {
+
+    private ListView listView;
+    private ArrayList<UserModel> userModelArrayList;
+    private CustomAdapter customAdapter;
+    private Sqlito databaseHelper;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,10 +28,19 @@ public class MuestaDatos extends AppCompatActivity {
 
         //      CAMBIA PANTALLA A MOSTRAR DATOS
         Button buttonVolver = findViewById(R.id.button_volver);
+
+        listView = (ListView) findViewById(R.id.muestra_lista);
+        databaseHelper = new Sqlito(this);
+        userModelArrayList = databaseHelper.getAllUsers();
+        customAdapter = new CustomAdapter(this, userModelArrayList);
+        listView.setAdapter(customAdapter);
+
+
         buttonVolver.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MuestaDatos.this, MainActivity.class);
+                intent.putExtra("user", userModelArrayList.get(position));
                 startActivity(intent);
             }
         });
