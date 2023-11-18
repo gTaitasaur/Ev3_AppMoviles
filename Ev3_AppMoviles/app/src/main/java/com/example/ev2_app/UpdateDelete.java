@@ -17,7 +17,7 @@ import java.util.ArrayList;
 public class UpdateDelete extends AppCompatActivity {
 
     private UserModel userModel;
-    private EditText etFecha, etHora, etNombre, etRut, etDescripcion;
+    private EditText etFecha, etHora, etNombre, etRut, etDescripcion, etLab;
     private Button actualizar, eliminar;
     private Sqlito databaseHelper;
 
@@ -35,15 +35,17 @@ public class UpdateDelete extends AppCompatActivity {
         etNombre = (EditText) findViewById(R.id.text_nombre);
         etRut = (EditText) findViewById(R.id.text_rut);
         etDescripcion = (EditText) findViewById(R.id.text_descripcion);
+        etLab = (EditText) findViewById(R.id.text_nombre);
 
         etFecha.setText(userModel.getFecha());
         etNombre.setText(userModel.getNombre());
         etRut.setText(userModel.getRut());
         etDescripcion.setText(userModel.getDescription());
+        etLab.setText(userModel.getLaboratorio());
 
         actualizar.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                databaseHelper.updateUser(userModel.getId(),etFecha.getText().toString(),etHora.getText().toString(),etNombre.getText().toString(), etRut.getText().toString(), etDescripcion.getText().toString());
+                databaseHelper.updateUser(userModel.getId(),etFecha.getText().toString(),etHora.getText().toString(),etNombre.getText().toString(), etRut.getText().toString(),etLab.getText().toString(), etDescripcion.getText().toString());
                 Toast.makeText(UpdateDelete.this, "Actualizado!", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(UpdateDelete.this, Sqlito.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);

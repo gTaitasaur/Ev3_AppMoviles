@@ -82,12 +82,16 @@ public class Sqlito extends SQLiteOpenHelper {
         return userModelArrayList;
     }
 
-    public int updateUser(int id, String description, String s, String toString, String string, String s1) {
+    public int updateUser(int id, String fecha, String hora, String lab, String nombre,String rut, String description) {
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues values = new ContentValues();
+        values.put(KEY_FECHA, fecha);
+        values.put(KEY_HORA, hora);
+        values.put(KEY_LAB, lab);
+        values.put(KEY_NOMBRE, nombre);
+        values.put(KEY_RUT, rut);
         values.put(KEY_DESCRIPTION, description);
-
         return db.update(TABLE_REPORT, values, KEY_ID + " = ?",
                 new String[]{String.valueOf(id)});
     }
