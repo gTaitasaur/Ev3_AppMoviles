@@ -48,7 +48,7 @@ public class Sqlito extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues values = new ContentValues();
-        values.put(KEY_HORA, nombre);
+        values.put(KEY_HORA, hora);
         values.put(KEY_FECHA, fecha);
         values.put(KEY_LAB, laboratorio);
         values.put(KEY_NOMBRE, nombre);

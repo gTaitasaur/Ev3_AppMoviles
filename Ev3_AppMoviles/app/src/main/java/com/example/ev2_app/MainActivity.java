@@ -14,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.Calendar;
 import android.widget.EditText;
 import android.text.TextUtils;
+import android.widget.Spinner;
 
 
 public class MainActivity extends AppCompatActivity implements SensorEventListener {
@@ -23,7 +24,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     private Sensor accelerometer;
     private boolean isVertical = false;
 
-    private EditText editRUT, editNombre, editDescripcion;
+    private EditText editFecha, editHora, editRUT, editNombre, editDescripcion;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +44,8 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         progressBar = findViewById(R.id.progressBar);
         Button myButton = findViewById(R.id.button_guardar);
 
+        editFecha = findViewById(R.id.editTextFecha);
+        editHora = findViewById(R.id.editTextHora);
         editRUT = findViewById(R.id.text_rut);
         editNombre = findViewById(R.id.text_nombre);
         editDescripcion = findViewById(R.id.text_descripcion);
@@ -73,7 +76,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
 
         myButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
                 checkFieldsAndSave();
             }
         });
@@ -143,11 +146,15 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     }
 
     private void checkFieldsAndSave() {
+        Spinner spinnerList = findViewById(R.id.lista_labs);
+        String laboratorio = (String) spinnerList.getSelectedItem();
+        String fecha = editFecha.getText().toString().trim();
+        String hora = editHora.getText().toString().trim();
         String rut = editRUT.getText().toString().trim();
         String nombre = editNombre.getText().toString().trim();
         String descripcion = editDescripcion.getText().toString().trim();
 
-        if (TextUtils.isEmpty(rut) || TextUtils.isEmpty(nombre) || TextUtils.isEmpty(descripcion)) {
+        if (TextUtils.isEmpty(rut) || TextUtils.isEmpty(nombre) || TextUtils.isEmpty(descripcion) || TextUtils.isEmpty(fecha) || TextUtils.isEmpty(hora)) {
             showAlert2("Debes llenar todos los campos");
             return;
         }
@@ -155,6 +162,15 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         if (!isRUTValid(rut)) {
             showAlert2("RUT no valido");
             return;
+        }
+
+        Sqlito dbHandler = new Sqlito(MainActivity.this);
+        long id = dbHandler.addUserDetail(hora, fecha, laboratorio, nombre, rut, descripcion);
+        if (id > 0) {
+            // Mostrar mensaje de éxito o manejar el resultado
+            showAlert2("hora, fecha, laboratorio, nombre, rut, descripcion" + hora + fecha + laboratorio + nombre + rut + descripcion);
+        } else {
+            // Mostrar mensaje de error
         }
 
     }
@@ -166,5 +182,6 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
                 .setPositiveButton("OK", null)
                 .show();
     }
+
 
 }

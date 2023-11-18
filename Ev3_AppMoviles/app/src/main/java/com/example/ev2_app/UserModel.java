@@ -42,7 +42,7 @@ public class UserModel implements Serializable{
         this.rdHora = rdHora;
     }
 
-    public void setLaboratorio(String rdLaboratorio) {
+    public void setLaboratorio(String rdLab) {
         this.rdLab = rdLab;
     }
 
