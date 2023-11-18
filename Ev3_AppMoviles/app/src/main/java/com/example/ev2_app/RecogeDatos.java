@@ -60,8 +60,8 @@ public class RecogeDatos extends BaseAdapter{
         }
 
         holder.recogerFecha.setText("Fecha: "+userModelArrayList.get(position).getFecha());
-        holder.recogerHora.setText("Hora: "+userModelArrayList.get(position).getFecha());
-        holder.recogerLab.setText("Laboratorio: "+userModelArrayList.get(position).getFecha());
+        holder.recogerHora.setText("Hora: "+userModelArrayList.get(position).getHora());
+        holder.recogerLab.setText("Laboratorio: "+userModelArrayList.get(position).getLaboratorio());
         holder.recogeNombre.setText("Nombre: "+userModelArrayList.get(position).getNombre());
         holder.recogeDescription.setText("Descripcion: "+userModelArrayList.get(position).getDescription());
 

@@ -47,7 +47,7 @@ public class UpdateDelete extends AppCompatActivity {
             public void onClick(View v) {
                 databaseHelper.updateUser(userModel.getId(),etFecha.getText().toString(),etHora.getText().toString(),etNombre.getText().toString(), etRut.getText().toString(),etLab.getText().toString(), etDescripcion.getText().toString());
                 Toast.makeText(UpdateDelete.this, "Actualizado!", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(UpdateDelete.this, Sqlito.class);
+                Intent intent = new Intent(UpdateDelete.this, MuestaDatos.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
             }
@@ -59,7 +59,7 @@ public class UpdateDelete extends AppCompatActivity {
             public void onClick(View v) {
                 databaseHelper.deleteUSer(userModel.getId());
                 Toast.makeText(UpdateDelete.this, "ELIMINADO!", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(UpdateDelete.this,Sqlito.class);
+                Intent intent = new Intent(UpdateDelete.this, MuestaDatos.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
             }
