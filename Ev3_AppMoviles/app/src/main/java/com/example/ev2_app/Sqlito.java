@@ -73,6 +73,7 @@ public class Sqlito extends SQLiteOpenHelper {
                 userModel.setHora(c.getString(c.getColumnIndex(KEY_HORA)));
                 userModel.setLaboratorio(c.getString(c.getColumnIndex(KEY_LAB)));
                 userModel.setNombre(c.getString(c.getColumnIndex(KEY_NOMBRE)));
+                userModel.setRut(c.getString(c.getColumnIndex(KEY_RUT)));
                 userModel.setDescription(c.getString(c.getColumnIndex(KEY_DESCRIPTION)));
 
                 userModelArrayList.add(userModel);

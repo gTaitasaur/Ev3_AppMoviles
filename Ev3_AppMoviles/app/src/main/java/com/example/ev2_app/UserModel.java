@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 public class UserModel implements Serializable{
 
-    private String fecha, hora, laboratorio, nombre, description;
+    private String rdFecha, rdHora, rdLab, rdNombre, rdRut, rdDescription;
     private int id;
 
     public int getId() {
@@ -16,39 +16,45 @@ public class UserModel implements Serializable{
     }
 
     public String getFecha() {
-        return fecha;
+        return rdFecha;
     }
     public String getHora() {
-        return hora;
+        return rdHora;
     }
     public String getLaboratorio() {
-        return laboratorio;
+        return rdLab;
     }
     public String getNombre() {
-        return nombre;
+        return rdNombre;
+    }
+    public String getRut() {
+        return rdRut;
     }
     public String getDescription() {
-        return description;
+        return rdDescription;
     }
 
-    public void setFecha(String fecha) {
-        this.fecha = fecha;
+    public void setFecha(String rdFecha) {
+        this.rdFecha = rdFecha;
     }
 
-    public void setHora(String hora) {
-        this.hora = hora;
+    public void setHora(String rdHora) {
+        this.rdHora = rdHora;
     }
 
-    public void setLaboratorio(String laboratorio) {
-        this.laboratorio = laboratorio;
+    public void setLaboratorio(String rdLaboratorio) {
+        this.rdLab = rdLab;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setNombre(String rdNombre) {
+        this.rdNombre = rdNombre;
+    }
+    public void setRut(String rdRut) {
+        this.rdRut = rdRut;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setDescription(String rdDescription) {
+        this.rdDescription = rdDescription;
     }
 
 }
