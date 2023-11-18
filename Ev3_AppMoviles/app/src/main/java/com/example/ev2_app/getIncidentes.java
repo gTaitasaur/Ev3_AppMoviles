@@ -21,13 +21,15 @@ public class getIncidentes extends AppCompatActivity {
 
     private Sqlito databaseHelper;
 
-    protected void onCreate(Bundle savedInstance) {
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         databaseHelper = new Sqlito(this);
 
-        grabar = (Button) findViewById(R.id.button_guardar);
+        grabar = (Button) findViewById(R.id.grabacion);
         mostrar = (Button) findViewById(R.id.button_mostrarDatos);
+
         etFecha = (EditText) findViewById(R.id.editTextFecha);
         etHora = (EditText) findViewById(R.id.editTextHora);
         etNombre = (EditText) findViewById(R.id.text_nombre);
