@@ -45,7 +45,7 @@ public class getIncidentes extends AppCompatActivity {
                 etNombre.setText("");
                 etRut.setText("");
                 etDesc.setText("");
-//                Toast.makeText(Sqlito.this, "Incidente Grabado!!!!!!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getIncidentes.this, "Incidente Grabado!!!!!!", Toast.LENGTH_SHORT).show();
 
             }
         });
