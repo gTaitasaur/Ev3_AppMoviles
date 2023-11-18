@@ -22,7 +22,6 @@ public class getIncidentes extends AppCompatActivity {
     private Sqlito databaseHelper;
 
     protected void onCreate(Bundle savedInstance) {
-        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         databaseHelper = new Sqlito(this);

@@ -39,8 +39,8 @@ public class MuestaDatos extends AppCompatActivity {
         buttonVolver.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MuestaDatos.this, MainActivity.class);
-                intent.putExtra("user", userModelArrayList.get(position));
+                Intent intent = new Intent(MuestaDatos.this, Sqlito.class);
+                intent.putExtra("user", userModelArrayList.get(0));
                 startActivity(intent);
             }
         });
