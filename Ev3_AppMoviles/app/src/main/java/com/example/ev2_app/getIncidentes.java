@@ -18,7 +18,7 @@ public class getIncidentes extends AppCompatActivity {
 
     Spinner spinnerList = findViewById(R.id.lista_Labs);
 
-    private DatabaseHelper Sqlito;
+    private Sqlito databaseHelper;
 
     protected void onCreate(Bundle savedInstance) {
         super.onCreate(savedInstanceState);
@@ -38,9 +38,25 @@ public class getIncidentes extends AppCompatActivity {
         grabar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                databaseHelper.addUserDetail
+                databaseHelper.addUserDetail(etFecha.getText().toString(), etHora.getText().toString(), etNombre.getText().toString(), etRut.getText().toString(), selectedOption.toString(), etDesc.getText().toString());
+                etFecha.setText("");
+                etHora.setText("");
+                etNombre.setText("");
+                etRut.setText("");
+                etDesc.setText("");
+                Toast.makeText(Sqlito.this, "Incidente Grabado!!!!!!", Toast.LENGTH_SHORT).show();
             }
         });
+
+
+//        BOTON MOSTRAR CAMBIO DE PANTALLA
+//
+//
+//
+//        mostrar.setOnClickListener(View v) {
+//
+//            Intent intent = new Intent(Sqlito.this,)
+//        }
 
 
     }
