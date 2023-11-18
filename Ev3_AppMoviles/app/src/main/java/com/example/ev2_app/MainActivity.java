@@ -157,7 +157,6 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
             return;
         }
 
-        showAlert2("Deseas grabar los cambios?");
     }
     
     private void showAlert2(String message) {
