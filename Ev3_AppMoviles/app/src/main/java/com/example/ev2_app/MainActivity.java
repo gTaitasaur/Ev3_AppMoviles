@@ -159,14 +159,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
 
         showAlert2("Deseas grabar los cambios?");
     }
-    private void showAlert() {
-        new AlertDialog.Builder(this)
-                .setTitle("Advertencia")
-                .setMessage("¿Deseas grabar los cambios?")
-                .setPositiveButton("Sí", null)
-                .setNegativeButton("No", null)
-                .show();
-    }
+    
     private void showAlert2(String message) {
         new AlertDialog.Builder(this)
                 .setTitle("Advertencia")
