@@ -43,11 +43,13 @@ public class RecogeDatos extends BaseAdapter{
             holder = new ViewHolder();
             LayoutInflater inflater = (LayoutInflater) context
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView = inflater.inflate(R.layout.lv_item, null, true);
+            convertView = inflater.inflate(R.layout.activity_recoger_datos, null, true);
 
-            holder.tvname = (TextView) convertView.findViewById(R.id.name);
-            holder.tvcountry = (TextView) convertView.findViewById(R.id.hobby);
-            holder.tvfavnumber = (TextView) convertView.findViewById(R.id.favnumber);
+            holder.recogerFecha = (TextView) convertView.findViewById(R.id.rdFecha);
+            holder.recogerHora = (TextView) convertView.findViewById(R.id.rdHora);
+            holder.recogerLab = (TextView) convertView.findViewById(R.id.rdLab);
+            holder.recogeNombre = (TextView) convertView.findViewById(R.id.rdNombre);
+            holder.recogeDescription = (TextView) convertView.findViewById(R.id.rdDescription);
 
 
 
@@ -57,15 +59,17 @@ public class RecogeDatos extends BaseAdapter{
             holder = (ViewHolder)convertView.getTag();
         }
 
-        holder.tvname.setText("Name: "+userModelArrayList.get(position).getName());
-        holder.tvcountry.setText("Hobby: "+userModelArrayList.get(position).getHobby());
-        holder.tvfavnumber.setText("Edad: "+userModelArrayList.get(position).getFavnumber());
+        holder.recogerFecha.setText("Fecha: "+userModelArrayList.get(position).getFecha());
+        holder.recogerHora.setText("Hora: "+userModelArrayList.get(position).getFecha());
+        holder.recogerLab.setText("Laboratorio: "+userModelArrayList.get(position).getFecha());
+        holder.recogeNombre.setText("Nombre: "+userModelArrayList.get(position).getNombre());
+        holder.recogeDescription.setText("Descripcion: "+userModelArrayList.get(position).getDescription());
 
         return convertView;
     }
 
     private class ViewHolder {
 
-        protected TextView tvname, tvcountry, tvfavnumber;
+        protected TextView recogerFecha, recogerHora, recogerLab, recogeNombre, recogeDescription;
     }
 }
