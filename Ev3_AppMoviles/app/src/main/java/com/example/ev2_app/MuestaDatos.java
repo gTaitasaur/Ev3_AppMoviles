@@ -36,16 +36,26 @@ public class MuestaDatos extends AppCompatActivity {
         listView.setAdapter(customAdapter);
 
 
-
-// HARDCODEO: SE REEMPLAZA get(position) por get(0),  TAMBIEN MainActivity.class por Sqlito.class
-        //      CAMBIA PANTALLA A MOSTRAR DATOS
-        buttonVolver.setOnClickListener(new View.OnClickListener() {
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MuestaDatos.this, Sqlito.class);
-                intent.putExtra("user", userModelArrayList.get(0));
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(MuestaDatos.this, UpdateDelete.class);
+                intent.putExtra("user", userModelArrayList.get(position));
                 startActivity(intent);
             }
         });
+
+
+
+// HARDCODEO: SE REEMPLAZA get(position) por get(0),  TAMBIEN MainActivity.class por Sqlito.class
+        //      CAMBIA PANTALLA A MOSTRAR DATOS
+//        buttonVolver.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(MuestaDatos.this, Sqlito.class);
+//                intent.putExtra("user", userModelArrayList.get(0));
+//                startActivity(intent);
+//            }
+//        });
     }
 }
