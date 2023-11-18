@@ -38,7 +38,7 @@ public class getIncidentes extends AppCompatActivity {
         grabar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                databaseHelper.addUserDetail
+                databaseHelper.addUserDetail;
             }
         });
 

@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 public class UserModel implements Serializable{
 
-    private String name, hobby, favnumber;
+    private String fecha, hora, laboratorio, nombre, description;
     private int id;
 
     public int getId() {
