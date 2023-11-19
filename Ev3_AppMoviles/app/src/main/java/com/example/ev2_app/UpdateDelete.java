@@ -55,7 +55,7 @@ public class UpdateDelete extends AppCompatActivity {
                         etNombre.getText().toString(),
                         etRut.getText().toString(),
                         etDescripcion.getText().toString());
-                Toast.makeText(UpdateDelete.this, "Actualizado!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(UpdateDelete.this, "Actualizado! \n Debes volver a mostrar datos.", Toast.LENGTH_SHORT).show();
                 finish();
             }
         });
