@@ -97,11 +97,11 @@ public class Sqlito extends SQLiteOpenHelper {
     }
 
     public void deleteUSer(int id) {
-
         SQLiteDatabase db = this.getWritableDatabase();
-        db.delete(TABLE_REPORT, KEY_ID + " = ?",
-                new String[]{String.valueOf(id)});
+        db.delete(TABLE_REPORT, KEY_ID + " = ?", new String[]{String.valueOf(id)});
+        db.close();
     }
+
 
 }
 
