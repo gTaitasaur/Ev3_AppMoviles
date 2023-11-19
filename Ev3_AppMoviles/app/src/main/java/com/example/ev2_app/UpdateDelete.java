@@ -65,7 +65,7 @@ public class UpdateDelete extends AppCompatActivity {
             public void onClick(View v) {
                 databaseHelper.deleteUSer(userModel.getId());
                 Toast.makeText(UpdateDelete.this, "Eliminado!", Toast.LENGTH_SHORT).show();
-                finish();
+                finish(); // Cierra la actividad actual y vuelve a la anterior
             }
         });
     }

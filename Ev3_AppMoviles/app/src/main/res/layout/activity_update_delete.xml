@@ -8,62 +8,99 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="16dp">
+            android:orientation="vertical">
 
-            <!-- Ejemplo de EditTexts para los campos -->
+            <ImageView
+                android:id="@+id/top_banner"
+                android:layout_width="match_parent"
+                android:layout_height="62dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/inacapbanner"
+                android:visibility="visible"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="#C12622"
+                app:layout_constraintTop_toBottomOf="@id/top_banner"
+                tools:layout_editor_absoluteX="0dp"></androidx.appcompat.widget.Toolbar>
+
             <EditText
                 android:id="@+id/etFecha"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Fecha" />
+                android:layout_height="60dp"
+                android:editable="false"
+                android:hint="Fecha"
+                android:padding="16dp" />
 
             <EditText
                 android:id="@+id/etHora"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="60dp"
+                android:editable="false"
+                android:padding="16dp"
                 android:hint="Hora" />
+
+            <EditText
+                android:id="@+id/etLab"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:editable="false"
+                android:hint="Laboratorio"
+                android:padding="16dp" />
 
             <EditText
                 android:id="@+id/etNombre"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="60dp"
+                android:padding="16dp"
+                android:editable="false"
                 android:hint="Nombre" />
 
             <EditText
                 android:id="@+id/etRut"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="60dp"
+                android:padding="16dp"
+                android:editable="false"
                 android:hint="RUT" />
 
             <EditText
                 android:id="@+id/etDescripcion"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="60dp"
+                android:padding="16dp"
                 android:hint="Descripción" />
 
-            <EditText
-                android:id="@+id/etLab"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Laboratorio" />
-
-            <!-- Botones para actualizar y eliminar -->
             <Button
                 android:id="@+id/btnActualizar"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:textColorHighlight="#FFFFFF"
+                android:textColorLink="#FFFFFF"
+                android:backgroundTint="#C1001F"
                 android:text="Actualizar" />
 
             <Button
                 android:id="@+id/btnEliminar"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:textColorHighlight="#FFFFFF"
+                android:textColorLink="#FFFFFF"
+                android:backgroundTint="#C1001F"
                 android:text="Eliminar" />
         </LinearLayout>
     </ScrollView>
