@@ -55,7 +55,7 @@ public class UpdateDelete extends AppCompatActivity {
                         etNombre.getText().toString(),
                         etRut.getText().toString(),
                         etDescripcion.getText().toString());
-                Toast.makeText(UpdateDelete.this, "Actualizado! \n Debes volver a mostrar datos.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(UpdateDelete.this, "Actualizado! \n Debes volver al inicio.", Toast.LENGTH_SHORT).show();
                 finish();
             }
         });
@@ -64,7 +64,7 @@ public class UpdateDelete extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 databaseHelper.deleteUSer(userModel.getId());
-                Toast.makeText(UpdateDelete.this, "Eliminado!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(UpdateDelete.this, "Eliminado! \n Debes volver al inicio.", Toast.LENGTH_SHORT).show();
                 finish(); // Cierra la actividad actual y vuelve a la anterior
             }
         });
