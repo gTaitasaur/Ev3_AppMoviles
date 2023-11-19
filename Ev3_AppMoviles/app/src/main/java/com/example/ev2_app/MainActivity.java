@@ -44,7 +44,6 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         progressBar = findViewById(R.id.progressBar);
         Button myButton = findViewById(R.id.button_guardar);
         Spinner spinnerList = findViewById(R.id.lista_labs);
-        String selectedOption = (String) spinnerList.getSelectedItem();
 
         editFecha = findViewById(R.id.editTextFecha);
         editHora = findViewById(R.id.editTextHora);
