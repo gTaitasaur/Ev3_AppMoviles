@@ -51,9 +51,9 @@ public class UpdateDelete extends AppCompatActivity {
                 databaseHelper.updateUser(userModel.getId(),
                         etFecha.getText().toString(),
                         etHora.getText().toString(),
+                        etLab.getText().toString(),
                         etNombre.getText().toString(),
                         etRut.getText().toString(),
-                        etLab.getText().toString(),
                         etDescripcion.getText().toString());
                 Toast.makeText(UpdateDelete.this, "Actualizado!", Toast.LENGTH_SHORT).show();
                 finish();

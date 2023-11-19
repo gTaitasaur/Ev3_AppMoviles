@@ -49,6 +49,7 @@ public class RecogeDatos extends BaseAdapter{
             holder.recogerHora = (TextView) convertView.findViewById(R.id.rdHora);
             holder.recogerLab = (TextView) convertView.findViewById(R.id.rdLab);
             holder.recogeNombre = (TextView) convertView.findViewById(R.id.rdNombre);
+            holder.recogerRut = (TextView) convertView.findViewById(R.id.rdRut);
             holder.recogeDescription = (TextView) convertView.findViewById(R.id.rdDescription);
 
 
@@ -63,6 +64,7 @@ public class RecogeDatos extends BaseAdapter{
         holder.recogerHora.setText("Hora: "+userModelArrayList.get(position).getHora());
         holder.recogerLab.setText("Laboratorio: "+userModelArrayList.get(position).getLaboratorio());
         holder.recogeNombre.setText("Nombre: "+userModelArrayList.get(position).getNombre());
+        holder.recogerRut.setText("RUT:"+userModelArrayList.get(position).getRut());
         holder.recogeDescription.setText("Descripcion: "+userModelArrayList.get(position).getDescription());
 
         return convertView;
@@ -70,6 +72,6 @@ public class RecogeDatos extends BaseAdapter{
 
     private class ViewHolder {
 
-        protected TextView recogerFecha, recogerHora, recogerLab, recogeNombre, recogeDescription;
+        protected TextView recogerFecha, recogerHora, recogerLab, recogeNombre, recogerRut, recogeDescription;
     }
 }
