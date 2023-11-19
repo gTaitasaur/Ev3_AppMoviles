@@ -61,7 +61,7 @@ public class Sqlito extends SQLiteOpenHelper {
 
     public ArrayList<UserModel> getAllUsers() {
         ArrayList<UserModel> userModelArrayList = new ArrayList<UserModel>();
-        String selectQuery = "SELECT  * FROM " + TABLE_REPORT;
+        String selectQuery = "SELECT  * FROM " + TABLE_REPORT + " ORDER BY " + KEY_FECHA + " DESC, " + KEY_HORA + " DESC";
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = db.rawQuery(selectQuery, null);
 
