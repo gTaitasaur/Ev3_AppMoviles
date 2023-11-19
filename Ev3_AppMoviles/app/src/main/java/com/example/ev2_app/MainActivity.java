@@ -169,7 +169,12 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         long id = dbHandler.addUserDetail(hora, fecha, laboratorio, nombre, rut, descripcion);
         if (id > 0) {
             // Mostrar mensaje de éxito o manejar el resultado
-            showAlert2("hora, fecha, laboratorio, nombre, rut, descripcion" + hora + fecha + laboratorio + nombre + rut + descripcion);
+            showAlert2("Hora: " + hora + "\n" +
+                    "Fecha: " + fecha + "\n" +
+                    "Laboratorio: " + laboratorio + "\n" +
+                    "Nombre: " + nombre + "\n" +
+                    "RUT: " + rut + "\n" +
+                    "Descripción: " + descripcion);
         } else {
             // Mostrar mensaje de error
         }
