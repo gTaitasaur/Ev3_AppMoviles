@@ -4,112 +4,67 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="UpdateDelete">
+    tools:context=".UpdateDelete">
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/siete">
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="16dp">
 
-            <ImageView
-                android:id="@+id/top_banner"
+            <!-- Ejemplo de EditTexts para los campos -->
+            <EditText
+                android:id="@+id/etFecha"
                 android:layout_width="match_parent"
-                android:layout_height="62dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/inacapbanner"
-                android:visibility="visible"/>
-
-
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                android:background="#C12622"></androidx.appcompat.widget.Toolbar>
-
-            <TextView
-                android:id="@+id/titulo_lab"
-                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="8dp"
-                android:shadowColor="#000000"
-                android:shadowDx="3"
-                android:shadowDy="1"
-                android:shadowRadius="3"
-                android:text="Laboratorios Área TI"
-                android:textAllCaps="false"
-                android:textColor="#7a7a7a"
-                android:textSize="34sp"
-                android:textStyle="bold" />
+                android:hint="Fecha" />
 
-            <TextView
-                android:id="@+id/titulo_sub"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="8dp"
-                android:shadowColor="#000000"
-                android:shadowDx="3"
-                android:shadowDy="1"
-                android:shadowRadius="3"
-                android:text="EDITAR INCIDENTES"
-                android:textColor="#7a7a7a"
-                android:textSize="20sp"
-                android:textStyle="bold"/>
-
-
-            <LinearLayout
-                android:id="@+id/container_gris"
+            <EditText
+                android:id="@+id/etHora"
                 android:layout_width="match_parent"
-                android:layout_height="281dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginRight="8dp"
-                android:background="#CCEFEFEF"
-                android:orientation="vertical"
-                android:padding="6dp">
+                android:layout_height="wrap_content"
+                android:hint="Hora" />
 
+            <EditText
+                android:id="@+id/etNombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nombre" />
 
-                <TextView
-                    android:id="@+id/nombre_descripcion"
-                    android:layout_width="match_parent"
-                    android:layout_height="41dp"
-                    android:text="Descripcion"
-                    android:textSize="20dp" />
+            <EditText
+                android:id="@+id/etRut"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="RUT" />
 
-                <EditText
-                    android:id="@+id/etdescripcion"
-                    android:layout_width="match_parent"
-                    android:layout_height="181dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginRight="10dp"
-                    android:background="#fff"
-                    android:hint="Descripcion del incidente" />
+            <EditText
+                android:id="@+id/etDescripcion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Descripción" />
 
+            <EditText
+                android:id="@+id/etLab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Laboratorio" />
 
-            </LinearLayout>
+            <!-- Botones para actualizar y eliminar -->
+            <Button
+                android:id="@+id/btnActualizar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Actualizar" />
 
             <Button
-                android:id="@+id/button_volver"
-                style="@style/Widget.Material3.Button.IconButton.Filled"
+                android:id="@+id/btnEliminar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginEnd="15dp"
-                android:backgroundTint="#C1001F"
-                android:text="Volver"
-                android:textColorHighlight="#FFFFFF"
-                android:textColorLink="#FFFFFF"
-                android:textSize="20sp" />
-
+                android:text="Eliminar" />
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
